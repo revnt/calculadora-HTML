@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <h1>Calculadora</h1>
+</head>
+<body>
+
+<button onclick="somar()">+</button>
+<button onclick="subtrair()">-</button>
+<button onclick="multiplicar()">*</button>
+<button onclick="dividir()">/</button><br><br>
+<input placeholder="digite o valor.." type="number" id="calcular"/>
+<input placeholder="digite o valor.." type="number" id="calcular2" /> <br><br>
+
+o resultado é : <span></span>
+
+
+
+
+<script>
+
+ // --jScriptHTMLElements -----------------x-----------------------------------------
+  var calcularEL = document.querySelector('#calcular')
+  var calcular2EL = document.querySelector('#calcular2')
+  var resultadoEL = document.querySelector('span')
+
+ // --funcoes de operação SOMAR, SUBTRAIR, MULTIPLICAR e DIVIDIR -------------------------------------------------x--------------------
+   function somar() {
+        resultadoEL.innerHTML = parseInt(calcularEL.value) + parseInt(calcular2EL.value);
+    }
+   function subtrair() {
+        resultadoEL.innerHTML = parseInt(calcularEL.value) - parseInt(calcular2EL.value)
+    }
+
+    function multiplicar() {
+        resultadoEL.innerHTML = parseInt(calcularEL.value) * parseInt(calcular2EL.value)
+    }
+
+    function dividir() {
+        resultadoEL.innerHTML = parseInt(calcularEL.value) / parseInt(calcular2EL.value)
+    }
+
+ </script>
+
+
+
+</body>
+</html>
